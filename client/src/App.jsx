@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShortUrl = () => {
+const App = () => {
   return (
     <div className="container">
       <h1>Hello</h1>
@@ -8,4 +8,4 @@ const ShortUrl = () => {
   );
 };
 
-export default ShortUrl;
+export default App;
