@@ -1,0 +1,34 @@
+@import "materialize-css";
+@import "~materialize-css/dist/css/materialize.min.css";
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 100%;
+  height: 100vh;
+  font-size: 16px;
+  padding-top: 10%;
+
+  background: rgb(255, 194, 254);
+  background: linear-gradient(
+    10deg,
+    rgba(255, 194, 254, 1) 0%,
+    rgba(62, 106, 201, 1) 100%
+  );
+}
+
+
+input + label {
+  color: white !important;
+}
+
+input:focus {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important;
+}

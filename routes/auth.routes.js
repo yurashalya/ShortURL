@@ -22,8 +22,7 @@ router.post(
           message: "Invalid values for registretion",
         });
       }
-
-      const { email, password } = res.body;
+      const { email, password } = req.body;
 
       const candidate = await User.findOne({ email });
 

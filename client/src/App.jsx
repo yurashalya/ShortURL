@@ -1,11 +1,9 @@
 import React from "react";
+import { useRoutes } from "./routes";
 
 const App = () => {
-  return (
-    <div className="container">
-      <h1>Hello</h1>
-    </div>
-  );
+  const routes = useRoutes(false);
+  return <div className="container">{routes}</div>;
 };
 
 export default App;
