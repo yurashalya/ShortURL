@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from "react";
-
-import "./auth.css";
+import React, { useState, useEffect, useContext } from "react";
 import { useHttp } from "hooks/http.hook";
 import { useMessage } from "hooks/message.hook";
+import { AuthContext } from "context/AuthContext";
+
+import "./auth.css";
 
 const AuthPage = () => {
+  const auth = useContext(AuthContext);
   const [form, setForm] = useState({ email: "", password: "" });
   const { loading, request, error, clearError } = useHttp();
   const message = useMessage();
+
+  useEffect(() => {
+    window.M.updateTextFields();
+  }, []);
 
   useEffect(() => {
     message(error);
@@ -17,7 +23,14 @@ const AuthPage = () => {
   const registerHandler = async () => {
     try {
       const data = await request("/api/auth/register", "POST", { ...form });
-      console.log("data", data);
+      message(data.message);
+    } catch (e) {}
+  };
+
+  const loginHandler = async () => {
+    try {
+      const data = await request("/api/auth/login", "POST", { ...form });
+      auth.login(data.token, data.userId);
     } catch (e) {}
   };
 
@@ -38,6 +51,7 @@ const AuthPage = () => {
               type="text"
               placeholder="Enter your email"
               name="email"
+              value={form.email}
               onChange={changeHandler}
             />
             <label htmlFor="email">Email</label>
@@ -48,6 +62,7 @@ const AuthPage = () => {
               type="password"
               name="password"
               placeholder="Enter your password"
+              value={form.password}
               onChange={changeHandler}
             />
             <label htmlFor="password">Password</label>
@@ -59,6 +74,7 @@ const AuthPage = () => {
             id="signup"
             className="authBtn"
             disabled={loading}
+            onClick={loginHandler}
           >
             login
           </button>

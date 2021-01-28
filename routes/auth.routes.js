@@ -58,7 +58,7 @@ router.post(
         });
       }
 
-      const { email, password } = res.body;
+      const { email, password } = req.body;
 
       const user = await User.findOne({ email });
 

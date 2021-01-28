@@ -3,5 +3,6 @@
     "jwtSecret": "mySecretKey",
     "user": "shalya",
     "pass": "Q1w2e3r4",
-    "mongoUrl": "mongodb+srv://@cluster0.zbd3f.mongodb.net/app?retryWrites=true&w=majority"
+    "mongoUrl": "mongodb+srv://@cluster0.zbd3f.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
 }
