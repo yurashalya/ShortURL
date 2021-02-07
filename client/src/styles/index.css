@@ -27,11 +27,14 @@ label  {
   color: white !important;
 }
 
+.input-field {
+  margin-bottom: 0;
+}
+
 input:focus {
   border-bottom: 1px solid white !important;
   box-shadow: 0 1px 0 0 white !important;
 }
-
 
 nav .nav-wrapper {
   background-color: #6a1b9a !important;
