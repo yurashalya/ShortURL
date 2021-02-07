@@ -1,3 +1,9 @@
+.rowAuth {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 .wrappAuth {
     width: 100%;
     max-width: 400px;
@@ -60,18 +66,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
+
   .authBtn {
+    width: 255px;
+    max-width: 255px;
     font-size: 1.25rem;
-    padding: 1rem 2rem;
+    padding: 8px 20px;
     background-color: rgba(255, 255, 255, 0.8);
     color: rgba(0, 0, 0, 0.5);
-    font-size: 1rem;
+    font-size: 16px;
     border: 1px solid transparent;
     border-radius: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s;
+  }
+
+  .authBtn:last-child {
+    margin-top: 6px;
   }
   
   .authBtn:hover {

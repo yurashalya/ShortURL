@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const config = require("config");
 const shortid = require("shortid");
-const Link = require("../models/Link");
+const Link = require("../models/link");
 const auth = require("../middleware/auth.middleware");
 
 router.post("/generate", auth, async (req, res) => {

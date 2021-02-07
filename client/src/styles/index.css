@@ -22,8 +22,8 @@ body {
   );
 }
 
-
-input + label {
+input,
+label  {
   color: white !important;
 }
 
@@ -35,4 +35,21 @@ input:focus {
 
 nav .nav-wrapper {
   background-color: #6a1b9a !important;
+}
+
+nav .brand-logo {
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default) {
+  height: 2rem !important;
+  margin-top: 7px;
+  background: inherit !important;
+  border-bottom: 1px solid white; 
+}
+
+.wrapp-links-list thead {
+  color: #cbd2d0;
 }

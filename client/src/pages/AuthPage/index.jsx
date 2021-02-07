@@ -39,34 +39,38 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="row">
+    <div className="rowAuth">
       <div className="wrappAuth">
         <div className="cardHeader">
           <p className="title">Shorten the Link</p>
         </div>
         <div className="cardBody">
-          <div className="input-field ">
-            <input
-              id="email"
-              type="text"
-              placeholder="Enter your email"
-              name="email"
-              value={form.email}
-              onChange={changeHandler}
-            />
-            <label htmlFor="email">Email</label>
-          </div>
-          <div className="input-field ">
-            <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              value={form.password}
-              onChange={changeHandler}
-            />
-            <label htmlFor="password">Password</label>
-          </div>
+          <form autoComplete="off">
+            <div className="input-field ">
+              <input
+                id="email"
+                type="text"
+                placeholder="Enter your email"
+                name="email"
+                value={form.email}
+                onChange={changeHandler}
+                autoComplete="false"
+              />
+              <label htmlFor="email">Email</label>
+            </div>
+            <div className="input-field ">
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                value={form.password}
+                onChange={changeHandler}
+                autoComplete="false"
+              />
+              <label htmlFor="password">Password</label>
+            </div>
+          </form>
         </div>
         <div className="cardFooter">
           <button

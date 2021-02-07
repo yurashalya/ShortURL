@@ -7,7 +7,7 @@ const LinksList = ({ links }) => {
   }
 
   return (
-    <table>
+    <table className="wrapp-links-list">
       <thead>
         <tr>
           <th>№</th>
